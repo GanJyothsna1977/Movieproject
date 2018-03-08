@@ -1,0 +1,9 @@
+.rule {
+  border: 2px solid grey;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+th {
+  text-align: center;
+}

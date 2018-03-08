@@ -1,0 +1,54 @@
+.head {
+  background-color: #f4e9de;
+  font-weight: bold;
+  color: brown;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 100px;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 4px #969696;
+}
+
+.background {
+  margin-top: 20px;
+}
+
+.tabwidth {
+  width: 425px;
+}
+
+.margi {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #225e95;
+}
+
+.tabl {
+  width: 500px;
+  line-height: 30px;
+}
+
+.tabhead {
+  margin-top: 30px;
+}
+
+h5 {
+  font-weight: bold;
+  color: brown;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.stroke {
+  border-left: 2px solid grey;
+}
+
+.backimage {
+  background-image: url(/assets/images/people.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

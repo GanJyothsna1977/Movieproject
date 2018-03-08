@@ -1,0 +1,13 @@
+.details {
+  font-weight: bold;
+  line-height: 40px;
+  color: #2c63b4;
+}
+
+.margin {
+  margin-bottom: 20px;
+}
+
+.payment-col {
+  background-color: #ececec;
+}

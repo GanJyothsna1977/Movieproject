@@ -1,0 +1,47 @@
+<div class="container-fluid colour">
+
+  <div class="container">
+
+  <h2 class="head"><b>Enter your Card Details</b></h2>
+    <form name="myForm" ng-submit="onlinepaymentinfoCtrl.makePayment()">
+    <div class="form-group">
+      <label for="Name" class="col-sm-2 col-form-label">Name of Card Holder</label>
+      <div class="col-sm-10">
+        <input name="cardname" type="text" class="form-control margin" id="name" placeholder="Your Name" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="Number" class="col-sm-2 col-form-label">Card Number</label>
+      <div class="col-sm-10">
+        <input type="number" maxlength="16" name="cardno" minlength="16" class="form-control margin" id="inputNumber" required placeholder="Your Card Number">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="CCV" class="col-sm-2 col-form-label">CCV Number</label>
+      <div class="col-sm-4">
+        <input type="password" maxlength="3" minlength="3" class="form-control margin" id="CCV" required placeholder="CCV Number">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="Expiry" class="col-sm-2 col-form-label">Card Expiry Date</label>
+      <div class="col-sm-4">
+        <input type="date" class="form-control margin" required id="CE" placeholder="Card Expiry Date">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="usr" class="col-sm-2 col-form-label">Total Amount</label>
+      <div class="col-sm-4">
+        <input type="text" required disabled class="form-control margin" id="usr" value={{totAmount}}>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword" class="col-sm-2 col-form-label">ATM Pin No.</label>
+      <div class="col-sm-4">
+        <input type="password" required maxlength="4" minlength="4" class="form-control margin" id="inputPassword" placeholder="PIN No.">
+      </div>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Make Payment"/>
+
+  </div> <!-- end of container -->
+
+</div>

@@ -1,0 +1,864 @@
+<div class="container">
+
+  <h3 class="heading">{{movieName}}</h3>
+
+  <div class="row">
+    <div class="col-sm-4 stroke1">
+      <h4 class="head">Your Selected Details</h4>
+      <p><b>Theatre Name : {{theatre}}</b></p>
+      <p><b>Show Date: {{showDate}}</b></p>
+      <p><b>Show Time: {{showTime}}</b></p>
+    </div>
+
+    <div class="col-sm-3">
+      <h4 class="head">Select Your Class: </h4>
+      <select>
+        <option value="select" id="classsel">Select Class</option>
+        <option value="Gold" id="classsel" ng-click="seatArrangementCtrl.selclass('Gold')">Gold</option>
+        <option value="Silver" id="classsel" ng-click="seatArrangementCtrl.selclass('Silver')">Silver</option>
+      </select>
+    </div>
+
+    <div class="col-sm-3 stroke">
+      <h4 class="head">Legend of Seats</h4>
+      <table class="table">
+        <tr>
+          <td>
+            <div class="seat"></div>
+            <p>Unselected</p>
+          </td>
+          <td>
+            <div class="seat seatselect"></div>
+            <p>Selected</p>
+          </td>
+          <td>
+            <div class="seat block"></div>
+            <p>Booked</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <button type="button" class="btn btn-secondary btn-sm btn-block">Screen</button>
+    </div>
+  </div>
+
+  <p id="p1"></p>
+  <table id="Gold" class="table" ng-show="goldclass">
+    <h3 ng-show="goldclass" class="details"><b>Gold Class</b></h3>
+    <!-- seat numbers -->
+    <tr class="colour">
+      <td><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+      <td>
+        <div>1</div>
+      </td>
+      <td>
+        <div>2</div>
+      </td>
+      <td>
+        <div>3</div>
+      </td>
+      <td>
+        <div>4</div>
+      </td>
+      <td>
+        <div>5</div>
+      </td>
+      <td>
+        <div>6</div>
+      </td>
+      <td>
+        <div>7</div>
+      </td>
+      <td>
+        <div>8</div>
+      </td>
+      <td>
+        <div>9</div>
+      </td>
+      <td>
+        <div>10</div>
+      </td>
+      <td><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+      <td>
+        <div>11</div>
+      </td>
+      <td>
+        <div>12</div>
+      </td>
+      <td>
+        <div>13</div>
+      </td>
+      <td>
+        <div>14</div>
+      </td>
+      <td>
+        <div>15</div>
+      </td>
+      <td>
+        <div>16</div>
+      </td>
+      <td>
+        <div>17</div>
+      </td>
+      <td>
+        <div>18</div>
+      </td>
+      <td>
+        <div>19</div>
+      </td>
+      <td>
+        <div>20</div>
+      </td>
+    </tr>
+
+  <!-- A row -->
+    <tr class="seat-col">
+      <td>
+        <div>A</div>
+      </td>
+      <td>
+        <div id="A1" class="seat" ng-click="seatArrangementCtrl.selseat('A1')"></div>
+      </td>
+      <td>
+        <div id="A2" class="seat" ng-click="seatArrangementCtrl.selseat('A2')"></div>
+      </td>
+      <td>
+        <div id="A3" class="seat" ng-click="seatArrangementCtrl.selseat('A3')"></div>
+      </td>
+      <td>
+        <div id="A4" class="seat" ng-click="seatArrangementCtrl.selseat('A4')"></div>
+      </td>
+      <td>
+        <div id="A5" class="seat" ng-click="seatArrangementCtrl.selseat('A5')"></div>
+      </td>
+      <td>
+        <div id="A6" class="seat" ng-click="seatArrangementCtrl.selseat('A6')"></div>
+      </td>
+      <td>
+        <div id="A7" class="seat" ng-click="seatArrangementCtrl.selseat('A7')"></div>
+      </td>
+      <td>
+        <div id="A8" class="seat" ng-click="seatArrangementCtrl.selseat('A8')"></div>
+      </td>
+      <td>
+        <div id="A9" class="seat" ng-click="seatArrangementCtrl.selseat('A9')"></div>
+      </td>
+      <td>
+        <div id="A10" class="seat" ng-click="seatArrangementCtrl.selseat('A10')"></div>
+      </td>
+      <td><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+      <td>
+        <div id="A11" class="seat" ng-click="seatArrangementCtrl.selseat('A11')"></div>
+      </td>
+      <td>
+        <div id="A12" class="seat" ng-click="seatArrangementCtrl.selseat('A12')"></div>
+      </td>
+      <td>
+        <div id="A13" class="seat" ng-click="seatArrangementCtrl.selseat('A13')"></div>
+      </td>
+      <td>
+        <div id="A14" class="seat" ng-click="seatArrangementCtrl.selseat('A14')"></div>
+      </td>
+      <td>
+        <div id="A15" class="seat" ng-click="seatArrangementCtrl.selseat('A15')"></div>
+      </td>
+      <td>
+        <div id="A16" class="seat" ng-click="seatArrangementCtrl.selseat('A16')"></div>
+      </td>
+      <td>
+        <div id="A17" class="seat" ng-click="seatArrangementCtrl.selseat('A17')"></div>
+      </td>
+      <td>
+        <div id="A18" class="seat" ng-click="seatArrangementCtrl.selseat('A18')"></div>
+      </td>
+      <td>
+        <div id="A19" class="seat" ng-click="seatArrangementCtrl.selseat('A19')"></div>
+      </td>
+      <td>
+        <div id="A20" class="seat" ng-click="seatArrangementCtrl.selseat('A20')"></div>
+      </td>
+    </tr>
+    <!-- B row -->
+    <tr class="seat-col">
+      <td>
+        <div>B</div>
+      </td>
+      <td>
+        <div id="B1" class="seat" ng-click="seatArrangementCtrl.selseat('B1')"></div>
+      </td>
+      <td>
+        <div id="B2" class="seat" ng-click="seatArrangementCtrl.selseat('B2')"></div>
+      </td>
+      <td>
+        <div id="B3" class="seat" ng-click="seatArrangementCtrl.selseat('B3')"></div>
+      </td>
+      <td>
+        <div id="B4" class="seat" ng-click="seatArrangementCtrl.selseat('B4')"></div>
+      </td>
+      <td>
+        <div id="B5" class="seat" ng-click="seatArrangementCtrl.selseat('B5')"></div>
+      </td>
+      <td>
+        <div id="B6" class="seat" ng-click="seatArrangementCtrl.selseat('B6')"></div>
+      </td>
+      <td>
+        <div id="B7" class="seat" ng-click="seatArrangementCtrl.selseat('B7')"></div>
+      </td>
+      <td>
+        <div id="B8" class="seat" ng-click="seatArrangementCtrl.selseat('B8')"></div>
+      </td>
+      <td>
+        <div id="B9" class="seat" ng-click="seatArrangementCtrl.selseat('B9')"></div>
+      </td>
+      <td>
+        <div id="B10" class="seat" ng-click="seatArrangementCtrl.selseat('B10')"></div>
+      </td>
+      <td><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+      <td>
+        <div id="B11" class="seat" ng-click="seatArrangementCtrl.selseat('B11')"></div>
+      </td>
+      <td>
+        <div id="B12" class="seat" ng-click="seatArrangementCtrl.selseat('B12')"></div>
+      </td>
+      <td>
+        <div id="B13" class="seat" ng-click="seatArrangementCtrl.selseat('B13')"></div>
+      </td>
+      <td>
+        <div id="B14" class="seat" ng-click="seatArrangementCtrl.selseat('B14')"></div>
+      </td>
+      <td>
+        <div id="B15" class="seat" ng-click="seatArrangementCtrl.selseat('B15')"></div>
+      </td>
+      <td>
+        <div id="B16" class="seat" ng-click="seatArrangementCtrl.selseat('B16')"></div>
+      </td>
+      <td>
+        <div id="B17" class="seat" ng-click="seatArrangementCtrl.selseat('B17')"></div>
+      </td>
+      <td>
+        <div id="B18" class="seat" ng-click="seatArrangementCtrl.selseat('B18')"></div>
+      </td>
+      <td>
+        <div id="B19" class="seat" ng-click="seatArrangementCtrl.selseat('B19')"></div>
+      </td>
+      <td>
+        <div id="B20" class="seat" ng-click="seatArrangementCtrl.selseat('B20')"></div>
+      </td>
+    </tr>
+    <!-- C row -->
+    <tr class="seat-col">
+      <td>
+        <div>C</div>
+      </td>
+      <td>
+        <div id="C1" class="seat" ng-click="seatArrangementCtrl.selseat('C1')"></div>
+      </td>
+      <td>
+        <div id="C2" class="seat" ng-click="seatArrangementCtrl.selseat('C2')"></div>
+      </td>
+      <td>
+        <div id="C3" class="seat" ng-click="seatArrangementCtrl.selseat('C3')"></div>
+      </td>
+      <td>
+        <div id="C4" class="seat" ng-click="seatArrangementCtrl.selseat('C4')"></div>
+      </td>
+      <td>
+        <div id="C5" class="seat" ng-click="seatArrangementCtrl.selseat('C5')"></div>
+      </td>
+      <td>
+        <div id="C6" class="seat" ng-click="seatArrangementCtrl.selseat('C6')"></div>
+      </td>
+      <td>
+        <div id="C7" class="seat" ng-click="seatArrangementCtrl.selseat('C7')"></div>
+      </td>
+      <td>
+        <div id="C8" class="seat" ng-click="seatArrangementCtrl.selseat('C8')"></div>
+      </td>
+      <td>
+        <div id="C9" class="seat" ng-click="seatArrangementCtrl.selseat('C9')"></div>
+      </td>
+      <td>
+        <div id="C10" class="seat" ng-click="seatArrangementCtrl.selseat('C10')"></div>
+      </td>
+      <td><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+      <td>
+        <div id="C11" class="seat" ng-click="seatArrangementCtrl.selseat('C11')"></div>
+      </td>
+      <td>
+        <div id="C12" class="seat" ng-click="seatArrangementCtrl.selseat('C12')"></div>
+      </td>
+      <td>
+        <div id="C13" class="seat" ng-click="seatArrangementCtrl.selseat('C13')"></div>
+      </td>
+      <td>
+        <div id="C14" class="seat" ng-click="seatArrangementCtrl.selseat('C14')"></div>
+      </td>
+      <td>
+        <div id="C15" class="seat" ng-click="seatArrangementCtrl.selseat('C15')"></div>
+      </td>
+      <td>
+        <div id="C16" class="seat" ng-click="seatArrangementCtrl.selseat('C16')"></div>
+      </td>
+      <td>
+        <div id="C17" class="seat" ng-click="seatArrangementCtrl.selseat('C17')"></div>
+      </td>
+      <td>
+        <div id="C18" class="seat" ng-click="seatArrangementCtrl.selseat('C18')"></div>
+      </td>
+      <td>
+        <div id="C19" class="seat" ng-click="seatArrangementCtrl.selseat('C19')"></div>
+      </td>
+      <td>
+        <div id="C20" class="seat" ng-click="seatArrangementCtrl.selseat('C20')"></div>
+      </td>
+    </tr>
+    <!-- D row -->
+    <tr class="seat-col">
+      <td>
+        <div>D</div>
+      </td>
+      <td>
+        <div id="D1" class="seat" ng-click="seatArrangementCtrl.selseat('D1')"></div>
+      </td>
+      <td>
+        <div id="D2" class="seat" ng-click="seatArrangementCtrl.selseat('D2')"></div>
+      </td>
+      <td>
+        <div id="D3" class="seat" ng-click="seatArrangementCtrl.selseat('D3')"></div>
+      </td>
+      <td>
+        <div id="D4" class="seat" ng-click="seatArrangementCtrl.selseat('D4')"></div>
+      </td>
+      <td>
+        <div id="D5" class="seat" ng-click="seatArrangementCtrl.selseat('D5')"></div>
+      </td>
+      <td>
+        <div id="D6" class="seat" ng-click="seatArrangementCtrl.selseat('D6')"></div>
+      </td>
+      <td>
+        <div id="D7" class="seat" ng-click="seatArrangementCtrl.selseat('D7')"></div>
+      </td>
+      <td>
+        <div id="D8" class="seat" ng-click="seatArrangementCtrl.selseat('D8')"></div>
+      </td>
+      <td>
+        <div id="D9" class="seat" ng-click="seatArrangementCtrl.selseat('D9')"></div>
+      </td>
+      <td>
+        <div id="D10" class="seat" ng-click="seatArrangementCtrl.selseat('D10')"></div>
+      </td>
+      <td><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+      <td>
+        <div id="D11" class="seat" ng-click="seatArrangementCtrl.selseat('D11')"></div>
+      </td>
+      <td>
+        <div id="D12" class="seat" ng-click="seatArrangementCtrl.selseat('D12')"></div>
+      </td>
+      <td>
+        <div id="D13" class="seat" ng-click="seatArrangementCtrl.selseat('D13')"></div>
+      </td>
+      <td>
+        <div id="D14" class="seat" ng-click="seatArrangementCtrl.selseat('D14')"></div>
+      </td>
+      <td>
+        <div id="D15" class="seat" ng-click="seatArrangementCtrl.selseat('D15')"></div>
+      </td>
+      <td>
+        <div id="D16" class="seat" ng-click="seatArrangementCtrl.selseat('D16')"></div>
+      </td>
+      <td>
+        <div id="D17" class="seat" ng-click="seatArrangementCtrl.selseat('D17')"></div>
+      </td>
+      <td>
+        <div id="D18" class="seat" ng-click="seatArrangementCtrl.selseat('D18')"></div>
+      </td>
+      <td>
+        <div id="D19" class="seat" ng-click="seatArrangementCtrl.selseat('D19')"></div>
+      </td>
+      <td>
+        <div id="D20" class="seat" ng-click="seatArrangementCtrl.selseat('D20')"></div>
+      </td>
+    </tr>
+    <!-- E row -->
+    <tr class="seat-col">
+      <td>
+        <div>E</div>
+      </td>
+      <td>
+        <div id="E1" class="seat" ng-click="seatArrangementCtrl.selseat('E1')"></div>
+      </td>
+      <td>
+        <div id="E2" class="seat" ng-click="seatArrangementCtrl.selseat('E2')"></div>
+      </td>
+      <td>
+        <div id="E3" class="seat" ng-click="seatArrangementCtrl.selseat('E3')"></div>
+      </td>
+      <td>
+        <div id="E4" class="seat" ng-click="seatArrangementCtrl.selseat('E4')"></div>
+      </td>
+      <td>
+        <div id="E5" class="seat" ng-click="seatArrangementCtrl.selseat('E5')"></div>
+      </td>
+      <td>
+        <div id="E6" class="seat" ng-click="seatArrangementCtrl.selseat('E6')"></div>
+      </td>
+      <td>
+        <div id="E7" class="seat" ng-click="seatArrangementCtrl.selseat('E7')"></div>
+      </td>
+      <td>
+        <div id="E8" class="seat" ng-click="seatArrangementCtrl.selseat('E8')"></div>
+      </td>
+      <td>
+        <div id="E9" class="seat" ng-click="seatArrangementCtrl.selseat('E9')"></div>
+      </td>
+      <td>
+        <div id="E10" class="seat" ng-click="seatArrangementCtrl.selseat('E10')"></div>
+      </td>
+      <td><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+      <td>
+        <div id="E11" class="seat" ng-click="seatArrangementCtrl.selseat('E11')"></div>
+      </td>
+      <td>
+        <div id="E12" class="seat" ng-click="seatArrangementCtrl.selseat('E12')"></div>
+      </td>
+      <td>
+        <div id="E13" class="seat" ng-click="seatArrangementCtrl.selseat('E13')"></div>
+      </td>
+      <td>
+        <div id="E14" class="seat" ng-click="seatArrangementCtrl.selseat('E14')"></div>
+      </td>
+      <td>
+        <div id="E15" class="seat" ng-click="seatArrangementCtrl.selseat('E15')"></div>
+      </td>
+      <td>
+        <div id="E16" class="seat" ng-click="seatArrangementCtrl.selseat('E16')"></div>
+      </td>
+      <td>
+        <div id="E17" class="seat" ng-click="seatArrangementCtrl.selseat('E17')"></div>
+      </td>
+      <td>
+        <div id="E18" class="seat" ng-click="seatArrangementCtrl.selseat('E18')"></div>
+      </td>
+      <td>
+        <div id="E19" class="seat" ng-click="seatArrangementCtrl.selseat('E19')"></div>
+      </td>
+      <td>
+        <div id="E20" class="seat" ng-click="seatArrangementCtrl.selseat('E20')"></div>
+      </td>
+    </tr>
+  </table>
+
+  <table id="Silver" class="table" ng-show="silverclass">
+    <tr>
+    <h3 ng-show="silverclass" class="details"><b>Silver Class</b></h3>
+    <!-- seat numbers -->
+    <tr class="colour">
+      <td><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+      <td>
+        <div>1</div>
+      </td>
+      <td>
+        <div>2</div>
+      </td>
+      <td>
+        <div>3</div>
+      </td>
+      <td>
+        <div>4</div>
+      </td>
+      <td>
+        <div>5</div>
+      </td>
+      <td>
+        <div>6</div>
+      </td>
+      <td>
+        <div>7</div>
+      </td>
+      <td>
+        <div>8</div>
+      </td>
+      <td>
+        <div>9</div>
+      </td>
+      <td>
+        <div>10</div>
+      </td>
+      <td><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+      <td>
+        <div>11</div>
+      </td>
+      <td>
+        <div>12</div>
+      </td>
+      <td>
+        <div>13</div>
+      </td>
+      <td>
+        <div>14</div>
+      </td>
+      <td>
+        <div>15</div>
+      </td>
+      <td>
+        <div>16</div>
+      </td>
+      <td>
+        <div>17</div>
+      </td>
+      <td>
+        <div>18</div>
+      </td>
+      <td>
+        <div>19</div>
+      </td>
+      <td>
+        <div>20</div>
+      </td>
+    </tr>
+
+    <!-- A row -->
+    <tr class="payment-col">
+      <td>
+        <div>F</div>
+      </td>
+      <td>
+        <div id="F1" class="seat" ng-click="seatArrangementCtrl.selseat('F1')"></div>
+      </td>
+      <td>
+        <div id="F2" class="seat" ng-click="seatArrangementCtrl.selseat('F2')"></div>
+      </td>
+      <td>
+        <div id="F3" class="seat" ng-click="seatArrangementCtrl.selseat('F3')"></div>
+      </td>
+      <td>
+        <div id="F4" class="seat" ng-click="seatArrangementCtrl.selseat('F4')"></div>
+      </td>
+      <td>
+        <div id="F5" class="seat" ng-click="seatArrangementCtrl.selseat('F5')"></div>
+      </td>
+      <td>
+        <div id="F6" class="seat" ng-click="seatArrangementCtrl.selseat('F6')"></div>
+      </td>
+      <td>
+        <div id="F7" class="seat" ng-click="seatArrangementCtrl.selseat('F7')"></div>
+      </td>
+      <td>
+        <div id="F8" class="seat" ng-click="seatArrangementCtrl.selseat('F8')"></div>
+      </td>
+      <td>
+        <div id="F9" class="seat" ng-click="seatArrangementCtrl.selseat('F9')"></div>
+      </td>
+      <td>
+        <div id="F10" class="seat" ng-click="seatArrangementCtrl.selseat('F10')"></div>
+      </td>
+      <td><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+      <td>
+        <div id="F11" class="seat" ng-click="seatArrangementCtrl.selseat('F11')"></div>
+      </td>
+      <td>
+        <div id="F12" class="seat" ng-click="seatArrangementCtrl.selseat('F12')"></div>
+      </td>
+      <td>
+        <div id="F13" class="seat" ng-click="seatArrangementCtrl.selseat('F13')"></div>
+      </td>
+      <td>
+        <div id="F14" class="seat" ng-click="seatArrangementCtrl.selseat('F14')"></div>
+      </td>
+      <td>
+        <div id="F15" class="seat" ng-click="seatArrangementCtrl.selseat('F15')"></div>
+      </td>
+      <td>
+        <div id="F16" class="seat" ng-click="seatArrangementCtrl.selseat('F16')"></div>
+      </td>
+      <td>
+        <div id="F17" class="seat" ng-click="seatArrangementCtrl.selseat('F17')"></div>
+      </td>
+      <td>
+        <div id="F18" class="seat" ng-click="seatArrangementCtrl.selseat('F18')"></div>
+      </td>
+      <td>
+        <div id="F19" class="seat" ng-click="seatArrangementCtrl.selseat('F19')"></div>
+      </td>
+      <td>
+        <div id="F20" class="seat" ng-click="seatArrangementCtrl.selseat('F20')"></div>
+      </td>
+    </tr>
+    <!-- B row -->
+    <tr class="payment-col">
+      <td>
+        <div>G</div>
+      </td>
+      <td>
+        <div id="G1" class="seat" ng-click="seatArrangementCtrl.selseat('G1')"></div>
+      </td>
+      <td>
+        <div id="G2" class="seat" ng-click="seatArrangementCtrl.selseat('G2')"></div>
+      </td>
+      <td>
+        <div id="G3" class="seat" ng-click="seatArrangementCtrl.selseat('G3')"></div>
+      </td>
+      <td>
+        <div id="G4" class="seat" ng-click="seatArrangementCtrl.selseat('G4')"></div>
+      </td>
+      <td>
+        <div id="G5" class="seat" ng-click="seatArrangementCtrl.selseat('G5')"></div>
+      </td>
+      <td>
+        <div id="G6" class="seat" ng-click="seatArrangementCtrl.selseat('G6')"></div>
+      </td>
+      <td>
+        <div id="G7" class="seat" ng-click="seatArrangementCtrl.selseat('G7')"></div>
+      </td>
+      <td>
+        <div id="G8" class="seat" ng-click="seatArrangementCtrl.selseat('G8')"></div>
+      </td>
+      <td>
+        <div id="G9" class="seat" ng-click="seatArrangementCtrl.selseat('G9')"></div>
+      </td>
+      <td>
+        <div id="G10" class="seat" ng-click="seatArrangementCtrl.selseat('G10')"></div>
+      </td>
+      <td><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+      <td>
+        <div id="G11" class="seat" ng-click="seatArrangementCtrl.selseat('G11')"></div>
+      </td>
+      <td>
+        <div id="G12" class="seat" ng-click="seatArrangementCtrl.selseat('G12')"></div>
+      </td>
+      <td>
+        <div id="G13" class="seat" ng-click="seatArrangementCtrl.selseat('G13')"></div>
+      </td>
+      <td>
+        <div id="G14" class="seat" ng-click="seatArrangementCtrl.selseat('G14')"></div>
+      </td>
+      <td>
+        <div id="G15" class="seat" ng-click="seatArrangementCtrl.selseat('G15')"></div>
+      </td>
+      <td>
+        <div id="G16" class="seat" ng-click="seatArrangementCtrl.selseat('G16')"></div>
+      </td>
+      <td>
+        <div id="G17" class="seat" ng-click="seatArrangementCtrl.selseat('G17')"></div>
+      </td>
+      <td>
+        <div id="G18" class="seat" ng-click="seatArrangementCtrl.selseat('G18')"></div>
+      </td>
+      <td>
+        <div id="G19" class="seat" ng-click="seatArrangementCtrl.selseat('G19')"></div>
+      </td>
+      <td>
+        <div id="G20" class="seat" ng-click="seatArrangementCtrl.selseat('G20')"></div>
+      </td>
+    </tr>
+    <!-- C row -->
+    <tr class="payment-col">
+      <td>
+        <div>H</div>
+      </td>
+      <td>
+        <div id="H1" class="seat" ng-click="seatArrangementCtrl.selseat('H1')"></div>
+      </td>
+      <td>
+        <div id="H2" class="seat" ng-click="seatArrangementCtrl.selseat('H2')"></div>
+      </td>
+      <td>
+        <div id="H3" class="seat" ng-click="seatArrangementCtrl.selseat('H3')"></div>
+      </td>
+      <td>
+        <div id="H4" class="seat" ng-click="seatArrangementCtrl.selseat('H4')"></div>
+      </td>
+      <td>
+        <div id="H5" class="seat" ng-click="seatArrangementCtrl.selseat('H5')"></div>
+      </td>
+      <td>
+        <div id="H6" class="seat" ng-click="seatArrangementCtrl.selseat('H6')"></div>
+      </td>
+      <td>
+        <div id="H7" class="seat" ng-click="seatArrangementCtrl.selseat('H7')"></div>
+      </td>
+      <td>
+        <div id="H8" class="seat" ng-click="seatArrangementCtrl.selseat('H8')"></div>
+      </td>
+      <td>
+        <div id="H9" class="seat" ng-click="seatArrangementCtrl.selseat('H9')"></div>
+      </td>
+      <td>
+        <div id="H10" class="seat" ng-click="seatArrangementCtrl.selseat('H10')"></div>
+      </td>
+      <td><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+      <td>
+        <div id="H11" class="seat" ng-click="seatArrangementCtrl.selseat('H11')"></div>
+      </td>
+      <td>
+        <div id="H12" class="seat" ng-click="seatArrangementCtrl.selseat('H12')"></div>
+      </td>
+      <td>
+        <div id="H13" class="seat" ng-click="seatArrangementCtrl.selseat('H13')"></div>
+      </td>
+      <td>
+        <div id="H14" class="seat" ng-click="seatArrangementCtrl.selseat('H14')"></div>
+      </td>
+      <td>
+        <div id="H15" class="seat" ng-click="seatArrangementCtrl.selseat('H15')"></div>
+      </td>
+      <td>
+        <div id="H16" class="seat" ng-click="seatArrangementCtrl.selseat('H16')"></div>
+      </td>
+      <td>
+        <div id="H17" class="seat" ng-click="seatArrangementCtrl.selseat('H17')"></div>
+      </td>
+      <td>
+        <div id="H18" class="seat" ng-click="seatArrangementCtrl.selseat('H18')"></div>
+      </td>
+      <td>
+        <div id="H19" class="seat" ng-click="seatArrangementCtrl.selseat('H19')"></div>
+      </td>
+      <td>
+        <div id="H20" class="seat" ng-click="seatArrangementCtrl.selseat('H20')"></div>
+      </td>
+    </tr>
+    <!-- D row -->
+    <tr class="payment-col">
+      <td>
+        <div>I</div>
+      </td>
+      <td>
+        <div id="I1" class="seat" ng-click="seatArrangementCtrl.selseat('I1')"></div>
+      </td>
+      <td>
+        <div id="I2" class="seat" ng-click="seatArrangementCtrl.selseat('I2')"></div>
+      </td>
+      <td>
+        <div id="I3" class="seat" ng-click="seatArrangementCtrl.selseat('I3')"></div>
+      </td>
+      <td>
+        <div id="I4" class="seat" ng-click="seatArrangementCtrl.selseat('I4')"></div>
+      </td>
+      <td>
+        <div id="I5" class="seat" ng-click="seatArrangementCtrl.selseat('I5')"></div>
+      </td>
+      <td>
+        <div id="I6" class="seat" ng-click="seatArrangementCtrl.selseat('I6')"></div>
+      </td>
+      <td>
+        <div id="I7" class="seat" ng-click="seatArrangementCtrl.selseat('I7')"></div>
+      </td>
+      <td>
+        <div id="I8" class="seat" ng-click="seatArrangementCtrl.selseat('I8')"></div>
+      </td>
+      <td>
+        <div id="I9" class="seat" ng-click="seatArrangementCtrl.selseat('I9')"></div>
+      </td>
+      <td>
+        <div id="I10" class="seat" ng-click="seatArrangementCtrl.selseat('I10')"></div>
+      </td>
+      <td><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+      <td>
+        <div id="I11" class="seat" ng-click="seatArrangementCtrl.selseat('I11')"></div>
+      </td>
+      <td>
+        <div id="I12" class="seat" ng-click="seatArrangementCtrl.selseat('I12')"></div>
+      </td>
+      <td>
+        <div id="I13" class="seat" ng-click="seatArrangementCtrl.selseat('I13')"></div>
+      </td>
+      <td>
+        <div id="I14" class="seat" ng-click="seatArrangementCtrl.selseat('I14')"></div>
+      </td>
+      <td>
+        <div id="I15" class="seat" ng-click="seatArrangementCtrl.selseat('I15')"></div>
+      </td>
+      <td>
+        <div id="I16" class="seat" ng-click="seatArrangementCtrl.selseat('I16')"></div>
+      </td>
+      <td>
+        <div id="I17" class="seat" ng-click="seatArrangementCtrl.selseat('I17')"></div>
+      </td>
+      <td>
+        <div id="I18" class="seat" ng-click="seatArrangementCtrl.selseat('I18')"></div>
+      </td>
+      <td>
+        <div id="I19" class="seat" ng-click="seatArrangementCtrl.selseat('I19')"></div>
+      </td>
+      <td>
+        <div id="I20" class="seat" ng-click="seatArrangementCtrl.selseat('I20')"></div>
+      </td>
+    </tr>
+    <!-- E row -->
+    <tr class="payment-col">
+      <td>
+        <div>J</div>
+      </td>
+      <td>
+        <div id="J1" class="seat" ng-click="seatArrangementCtrl.selseat('J1')"></div>
+      </td>
+      <td>
+        <div id="J2" class="seat" ng-click="seatArrangementCtrl.selseat('J2')"></div>
+      </td>
+      <td>
+        <div id="J3" class="seat" ng-click="seatArrangementCtrl.selseat('J3')"></div>
+      </td>
+      <td>
+        <div id="J4" class="seat" ng-click="seatArrangementCtrl.selseat('J4')"></div>
+      </td>
+      <td>
+        <div id="J5" class="seat" ng-click="seatArrangementCtrl.selseat('J5')"></div>
+      </td>
+      <td>
+        <div id="J6" class="seat" ng-click="seatArrangementCtrl.selseat('J6')"></div>
+      </td>
+      <td>
+        <div id="J7" class="seat" ng-click="seatArrangementCtrl.selseat('J7')"></div>
+      </td>
+      <td>
+        <div id="J8" class="seat" ng-click="seatArrangementCtrl.selseat('J8')"></div>
+      </td>
+      <td>
+        <div id="J9" class="seat" ng-click="seatArrangementCtrl.selseat('J9')"></div>
+      </td>
+      <td>
+        <div id="J10" class="seat" ng-click="seatArrangementCtrl.selseat('J10')"></div>
+      </td>
+      <td><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+      <td>
+        <div id="J11" class="seat" ng-click="seatArrangementCtrl.selseat('J11')"></div>
+      </td>
+      <td>
+        <div id="J12" class="seat" ng-click="seatArrangementCtrl.selseat('J12')"></div>
+      </td>
+      <td>
+        <div id="J13" class="seat" ng-click="seatArrangementCtrl.selseat('J13')"></div>
+      </td>
+      <td>
+        <div id="J14" class="seat" ng-click="seatArrangementCtrl.selseat('J14')"></div>
+      </td>
+      <td>
+        <div id="J15" class="seat" ng-click="seatArrangementCtrl.selseat('J15')"></div>
+      </td>
+      <td>
+        <div id="J16" class="seat" ng-click="seatArrangementCtrl.selseat('J16')"></div>
+      </td>
+      <td>
+        <div id="J17" class="seat" ng-click="seatArrangementCtrl.selseat('J17')"></div>
+      </td>
+      <td>
+        <div id="J18" class="seat" ng-click="seatArrangementCtrl.selseat('J18')"></div>
+      </td>
+      <td>
+        <div id="J19" class="seat" ng-click="seatArrangementCtrl.selseat('J19')"></div>
+      </td>
+      <td>
+        <div id="J20" class="seat" ng-click="seatArrangementCtrl.selseat('J20')"></div>
+      </td>
+    </tr>
+  </table>
+
+  <button type="submit" name="button" id="book" class="btn btn-info" ng-click="seatArrangementCtrl.booking()" disabled="disabled">Book Seats</button>
+  <button type="submit" name="button" class="btn btn-danger" ng-click="seatArrangementCtrl.main()">Reject</button>
+
+</div> <!-- end of container -->

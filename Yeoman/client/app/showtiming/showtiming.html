@@ -1,0 +1,24 @@
+<div class="container-fluid backimage">
+  <div class="container">
+
+    <h2 class="head">Select your Theatre and Show Time</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h4 class="margi">{{movieName}}</h4>
+        <img ng-src="{{moviePoster}}" width="180" height="220" />
+      </div>
+      <div class="col-md-8 stroke background">
+        <button ng-repeat="mdate in mdates" class="btn btn-primary" ng-click="showtimingCtrl.selectedDate(mdate)">{{mdate}}</button>
+        <h5>Current Date/Time is: <span id="date"></span></h5>
+        <table ng-show="dateAvailable" class="table tabwidth">
+          <tr ng-repeat="mdetail in showtimingCtrl.movieDetails">
+            <td>{{mdetail.theatre}}</td>
+            <td class ng-repeat="mtime in mdetail.times"><a href="/seat-arrangement" ng-click="showtimingCtrl.showTime(mtime,mdetail.theatre)">{{mtime}}</a></td>
+          </tr>
+        </table>
+        <p class="text-danger">Select the date for theatre and showtimes</p>
+      </div>
+    </div>
+
+  </div> <!-- end of container -->
+</div>

@@ -1,0 +1,29 @@
+.seat {
+  width: 25px;
+  height: 25px;
+  border: 2px solid black;
+  border-radius: 20%;
+  background-color: white;
+  }
+
+.seatselect {
+  background-color: Green;
+}
+
+.block {
+  background-color: grey;
+}
+
+.stroke1 {
+  border-right: 2px solid grey;
+  margin-right: 30px;
+}
+
+.colour {
+  color: white;
+  background-color: #880d07;
+}
+
+.seat-col {
+  background-color: #edec83;
+}

@@ -1,0 +1,80 @@
+<div class="container">
+
+  <!-- Search for movies in city -->
+  <h2 class="heading">Search for your favourite movies</h2>
+  <form ng-submit="moviesCtrl.SearchMovie()">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Movie Name" ng-model="MovieName" required>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Year of Release" ng-model="Year">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="submit" class="btn btn-primary" value="Search Movie" />
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <table ng-show="moviesCtrl.MovieData.Title" class="table table-bordered">
+        <tr class="success">
+          <th>Poster</th>
+          <th>Title</th>
+          <th>Genre</th>
+          <th>Overview</th>
+          <th>Released</th>
+          <th>Duration</th>
+          <th>Production</th>
+        </tr>
+        <tr>
+          <td><img src="{{moviesCtrl.MovieData.Poster}}" width="175" height="220" alt""></td>
+          <td>{{moviesCtrl.MovieData.Title}}</td>
+          <td>{{moviesCtrl.MovieData.Genre}}</td>
+          <td>{{moviesCtrl.MovieData.Overview}}</td>
+          <td>{{moviesCtrl.MovieData.ReleaseDate}}</td>
+          <td>{{moviesCtrl.MovieData.Duration}}</td>
+          <td>{{moviesCtrl.MovieData.Production}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <button type="submit" ng-show="moviesCtrl.MovieData.Title" name="button" ng-click="moviesCtrl.addMovie()" class="btn btn-primary">Add movie to Database</button>
+
+  <hr class="rule">
+
+  <h2 class="heading">Movies in Database</h2>
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table table-bordered">
+        <tr class="info">
+          <th>Poster</th>
+          <th>Title</th>
+          <th>Genre</th>
+          <th>Overview</th>
+          <th>Released</th>
+          <th>Duration</th>
+          <th colspan="2">Production</th>
+        </tr>
+        <tr ng-repeat="movie in moviesCtrl.Movies">
+          <td><img src="{{movie.Poster}}" alt"" width="175" height="220"></td>
+          <td>{{movie.Title}}</td>
+          <td>{{movie.Genre}}</td>
+          <td>{{movie.Overview}}</td>
+          <td>{{movie.ReleaseDate}}</td>
+          <td>{{movie.Duration}}</td>
+          <td>{{movie.Production}}</td>
+          <td><button class="btn btn-danger" ng-click="moviesCtrl.deleteMovie(movie)"><span class="glyphicon glyphicon-trash"></span></button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</div> <!-- end of container -->

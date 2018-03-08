@@ -1,0 +1,21 @@
+.align {
+  text-align: center;
+}
+
+.backimg1 {
+  background-image: url(/assets/images/sparkles1.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.head-star {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: yellow;
+  text-shadow: 2px 2px 4px #969696;
+  margin-bottom: 25px;
+}

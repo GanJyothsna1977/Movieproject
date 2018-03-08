@@ -1,0 +1,24 @@
+.footer {
+  background-color: #e9e9e8;
+  color: grey;
+  margin-top: 20px;
+}
+
+.footer_head {
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.footer_body {
+  font-size: 11px;
+}
+
+.flist {
+  font-size: 11px;
+  color: grey;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

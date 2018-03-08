@@ -1,0 +1,70 @@
+<div class="container-fluid backimg1">
+  <div class="container">
+
+    <h2 class="head-star">Movies Rating for Movies you Watched</h2>
+
+    <div class="row">
+      <div ng-repeat="movie in starRateCtrl.runningMovies" class="col-sm-4">
+        <div class="thumbnail box">
+          <img ng-src="{{movie.Poster}}" width="175" height="220" />
+          <div class="caption">
+            <h4 class="titl"><b>{{movie.Title}}</b></h4>
+          </div>
+          <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success left-mar3 ratebtn" ng-click="starRateCtrl.rateMovie(movie.Title)">Rate your Movie</button>
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- star rating -->
+              <script>
+              $(function () {
+                $("#rateYo").rateYo({
+                  rating    : 0,
+                  spacing   : "5px",
+                  halfStar: true,
+                  multiColor: {
+                    "startColor": "#FF0000", //RED
+                    "endColor"  : "#00FF00"  //GREEN
+                  },
+                  onChange: function (rating, rateYoInstance) {
+                    $(this).next().text(rating);
+                    rate = rating;
+                    $("#showrate").val(rate);
+                  }
+                });
+
+                $(".rated").click(function(){
+                  $("#rateYo").rateYo("option", "rating", 0);
+                  rate = 0;
+                });
+                $(".closing").click(function(){
+                  $("#rateYo").rateYo("option", "rating", 0);
+                });
+              });
+              </script>
+              <!-- end of star rating script -->
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4  class="modal-title">Movie Rating</h4>
+                </div>
+                <div class="modal-body">
+                  <h2 class="titl"><b>{{movieName}}</b></h2>
+                  <div id="rateYo"></div>  <!-- star rating html -->
+                  <p class="align" id="showrate" ></p>
+                  <button type="button"  class="btn btn-success left-mar2 rated" ng-click="starRateCtrl.movieRate()" data-dismiss="modal">Submit Rating</button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default closing" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- end of container -->
+</div>

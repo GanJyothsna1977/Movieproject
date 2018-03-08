@@ -1,0 +1,96 @@
+<div class="container-fluid sparkle">
+  <div class="container">
+
+    <h2 class="heading">Mapping your Movie</h2>
+    <div id="map_movie">
+      <form ng-submit="moviemapCtrl.addMapping()">
+        <div class="form-group">
+          <label for="sel1">Movies</label>
+          <select class="form-control text" ng-model="moviemapCtrl.theatreForm.movie" required>
+            <option value="">Select Movie</option>
+            <option ng-repeat="m in moviemapCtrl.Movies" value="{{m.Title}}">{{m.Title}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="sel1">City</label>
+          <select class="form-control" ng-model="moviemapCtrl.theatreForm.city" required>
+            <option value="">Select City</option>
+            <option ng-repeat="c in moviemapCtrl.cityNames" value="{{c}}">{{c}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="sel1">Theatres</label>
+          <select class="form-control" ng-model="moviemapCtrl.theatreForm.theatreName" required>
+            <option value="">Select Theatre</option>
+            <option ng-repeat="t in moviemapCtrl.cityMappings[moviemapCtrl.theatreForm.city]" value="{{t.theatreName}}">{{t.theatreName}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-1">
+              <label for="seldate">Date</label>
+            </div>
+            <div class="col-sm-2">
+              <input type="date" ng-model="moviemapCtrl.theatreForm.seldate" required/>
+            </div>
+            <div class="col-sm-1">
+              <button class="btn btn-success" ng-click="moviemapCtrl.addDate()">Add Date</button>
+            </div>
+            <div class="col-sm-1" ng-repeat="d in moviemapCtrl.dates track by $index">
+              <div>
+                <button class="btn btn-default">{{d}}</button>
+              </div>
+              <div>
+                <button class="btn btn-danger" ng-click="moviemapCtrl.deleteDate($index)">x</button>
+              </div>
+            </div>
+          </div><br>
+          <div class="row">
+            <div class="col-sm-1">
+              <label for="seltime">Time</label>
+            </div>
+            <div class="col-sm-2">
+              <input type="time" ng-model="moviemapCtrl.theatreForm.seltime" required/>
+            </div>
+            <div class="col-sm-1">
+              <button class="btn btn-success" ng-click="moviemapCtrl.addTime()">Add Time</button>
+            </div>
+            <div class="col-sm-1" ng-repeat="t in moviemapCtrl.time track by $index">
+              <div>
+                <button class="btn btn-default">{{t}}</button>
+              </div>
+              <div>
+                <button class="btn btn-danger" ng-click="moviemapCtrl.deleteTime($index)">x</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <input type="submit" class="btn btn-success" value="Save Mapping Details" />
+      </form>
+    </div>
+
+    <hr class="rule">
+
+    <h2 class="heading">Movie Map in Database</h2>
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table table-bordered">
+          <tr class="info">
+            <th>City</th>
+            <th>Movie Name</th>
+            <th>Theatre Name</th>
+            <th colspan="2">Show Timings</th>
+          </tr>
+          <tr ng-repeat="moviemap in moviemapCtrl.moviemaps" class="white">
+            <td>{{moviemap.city}}</td>
+            <td>{{moviemap.movieName}}</td>
+            <td>{{moviemap.theatre}}</td>
+            <td>{{moviemap.times}}</td>
+            <td><button class="btn btn-danger" ng-click="moviemapCtrl.deletemoviemap(moviemap)"><span class="glyphicon glyphicon-trash"></span></button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div> <!-- end of container -->
+</div>
