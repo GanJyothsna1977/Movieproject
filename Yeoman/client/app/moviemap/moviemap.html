@@ -34,7 +34,7 @@
               <input type="date" ng-model="moviemapCtrl.theatreForm.seldate" required/>
             </div>
             <div class="col-sm-1">
-              <button class="btn btn-success" ng-click="moviemapCtrl.addDate()">Add Date</button>
+              <button class="btn btn-success" type="button" ng-click="moviemapCtrl.addDate()">Add Date</button>
             </div>
             <div class="col-sm-1" ng-repeat="d in moviemapCtrl.dates track by $index">
               <div>
@@ -53,9 +53,9 @@
               <input type="time" ng-model="moviemapCtrl.theatreForm.seltime" required/>
             </div>
             <div class="col-sm-1">
-              <button class="btn btn-success" ng-click="moviemapCtrl.addTime()">Add Time</button>
+              <button class="btn btn-success" type="button" ng-click="moviemapCtrl.addTime()">Add Time</button>
             </div>
-            <div class="col-sm-1" ng-repeat="t in moviemapCtrl.time track by $index">
+            <div class="col-sm-1" ng-repeat="t in moviemapCtrl.times track by $index">
               <div>
                 <button class="btn btn-default">{{t}}</button>
               </div>

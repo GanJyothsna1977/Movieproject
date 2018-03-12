@@ -8,7 +8,7 @@ class MoviemapComponent {
     this.$http = $http;
     this.theatreForm = {};
     this.dates = [];
-    this.time = [];
+    this.times= [];
     this.moviemaps=[];
     this.mapping = {};
     this.$scope = $scope;
@@ -48,7 +48,7 @@ addMapping() {
     city: this.theatreForm.city,
     theatre: this.theatreForm.theatreName,
     dates: this.dates,
-    times: this.time
+    times: this.times
   };
 
   this.$http.post('/api/moviemap',this.mapping);
@@ -57,7 +57,7 @@ addMapping() {
   this.mapping = {};
   this.theatreForm = {};
   this.dates = [];
-  this.time = [];
+  this.times = [];
 }
 
 addDate() {
@@ -82,12 +82,13 @@ addTime() {
   var seconds = time.getSeconds(this.theatreForm.seltime) < 10 ? "0" + time.getSeconds(this.theatreForm.seltime) : time.getSeconds();
 
   time = hours + ":" + minutes + am_pm;
-  this.time.push(time);
-  console.log(this.time);
+  this.times.push(time);
+  console.log(this.times);
+  time='';
 }
 
 deleteTime(i) {
-  this.time.splice(i,1);
+  this.times.splice(i,1);
 }
 
 deletemoviemap(moviemap) {

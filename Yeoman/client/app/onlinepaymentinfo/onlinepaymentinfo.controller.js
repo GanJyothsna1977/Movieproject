@@ -33,8 +33,7 @@ class OnlinepaymentinfoComponent {
       document.myForm.cardname.focus() ;
       return false;
     }
-    else if(cno.length<16)
-    {
+    else if(cno.length<16) {
       alert( "Enter valid card no" );
       document.myForm.cardno.focus() ;
       return false;

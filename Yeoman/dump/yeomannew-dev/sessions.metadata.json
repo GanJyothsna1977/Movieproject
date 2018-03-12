@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"yeomannew-dev.sessions"},{"v":2,"key":{"expires":1},"name":"expires_1","ns":"yeomannew-dev.sessions","expireAfterSeconds":0}],"uuid":"eda387920b914a8ebe3c22f39e08dec7"}
